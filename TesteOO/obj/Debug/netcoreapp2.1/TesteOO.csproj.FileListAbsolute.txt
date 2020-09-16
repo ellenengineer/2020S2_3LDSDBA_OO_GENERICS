@@ -1,0 +1,11 @@
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.csprojAssemblyReference.cache
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.AssemblyInfoInputs.cache
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.AssemblyInfo.cs
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\bin\Debug\netcoreapp2.1\TesteOO.deps.json
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\bin\Debug\netcoreapp2.1\TesteOO.runtimeconfig.json
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\bin\Debug\netcoreapp2.1\TesteOO.runtimeconfig.dev.json
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\bin\Debug\netcoreapp2.1\TesteOO.dll
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\bin\Debug\netcoreapp2.1\TesteOO.pdb
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.dll
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.pdb
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.csproj.CoreCompileInputs.cache
