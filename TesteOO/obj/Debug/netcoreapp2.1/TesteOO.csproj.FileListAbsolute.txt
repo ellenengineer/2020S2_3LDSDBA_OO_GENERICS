@@ -9,3 +9,4 @@ C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\Test
 C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.dll
 C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.pdb
 C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.csproj.CoreCompileInputs.cache
+C:\Users\drumm\OneDrive\Documentos\Fapen\2020S2_3LDSDBA\Código\Aula4_Aula5\TesteOO\obj\Debug\netcoreapp2.1\TesteOO.genruntimeconfig.cache

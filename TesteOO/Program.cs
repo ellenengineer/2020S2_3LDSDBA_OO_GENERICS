@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 
 namespace TesteOO
 {
@@ -9,36 +10,36 @@ namespace TesteOO
         static void Main(string[] args)
         {
 
-            TesteOOFelino();
-            //Exemplo 1 Herança e polimorfismo
-            HerancaPolimorfismo();
+            //TesteOOFelino();
+            /*//Exemplo 1 Herança e polimorfismo
+            HerancaPolimorfismo();*/
 
-            /* //Exemplo 2 - Teste de Dictionary<int,value>
+          /* //Exemplo 2 - Teste de Dictionary<int,value>
              TesteDictionary();*/
 
-            /*// Exemplo 4 - Iteração com List<T>
+           /* // Exemplo 4 - Iteração com List<T>
             TesteList();*/
 
-            /*//Exemplo 5 - Teste Queue<T>
+           /* //Exemplo 5 - Teste Queue<T>
             TesteQueueT();*/
 
-            /*//Exemplo 6 - SortedList < Tkey,Tvalue >
+          /*  //Exemplo 6 - SortedList < Tkey,Tvalue >
             TesteSortedListT();*/
 
-            /*//Exemplo 7 - Stack<T>
+           /* //Exemplo 7 - Stack<T>
             TesteStackT();*/
 
             /*//Exemplo 8 - ArrayList
             TesteArrayList();*/
 
-            /* //Exemplo 9 - HashTable
+            /*//Exemplo 9 - HashTable
              TesteHashTable();*/
 
-            /* //Exemplo 10 - Queue
+           /* //Exemplo 10 - Queue
              TesteQueue();*/
 
-           /* //Exemplo 11 - Stack
-            TesteStack();*/
+            //Exemplo 11 - Stack
+            TesteStack();
 
 
 
@@ -60,9 +61,15 @@ namespace TesteOO
             stackPF.Push(new clsPessoaFisica("Sindel", new DateTime(2014, 04, 07)));
 
             Console.WriteLine("PF Stack");
-            Console.WriteLine("\tQuantidade:    {0}", stackPF.Count);
+            Console.WriteLine("\nQuantidade:    {0}", stackPF.Count);
             Console.Write("\nValores:");
             foreach ( clsPessoaFisica objPF in stackPF)
+                Console.Write("    {0}", objPF.Nome);
+
+            Console.WriteLine("\nRemovendo o item " + ((clsPessoaFisica) stackPF.Pop()).Nome);
+
+            Console.WriteLine("nova lista é: ");
+            foreach (clsPessoaFisica objPF in stackPF)
                 Console.Write("    {0}", objPF.Nome);
         }
         /// <summary>
@@ -82,8 +89,12 @@ namespace TesteOO
 
             // Displays the properties and values of the Queue.
             Console.WriteLine("Queue");
-            Console.WriteLine("\tQtde:    {0}", queuePF.Count);
-            Console.Write("\tValores:");
+            Console.WriteLine("\nQtde:    {0}", queuePF.Count);
+            Console.Write("\nValores:");
+            foreach (clsPessoaFisica objPF in queuePF)
+                Console.Write("    {0}", objPF.Nome);
+
+            Console.WriteLine(  "\nRemovendo item : " + ((clsPessoaFisica)queuePF.Dequeue()).Nome);
             foreach (clsPessoaFisica objPF in queuePF)
                 Console.Write("    {0}", objPF.Nome);
 
@@ -97,18 +108,14 @@ namespace TesteOO
             Hashtable htPessoaFisica = new Hashtable();
 
             htPessoaFisica.Add(1, new clsPessoaFisica("Fulano", new DateTime(1980, 05, 30)));
-
             htPessoaFisica.Add(2, new clsPessoaFisica("Beltrano", new DateTime(1990, 04, 10)));
-
             htPessoaFisica.Add(3, new clsPessoaFisica("Ciclano", new DateTime(1995, 02, 25)));
-
             htPessoaFisica.Add(4, new clsPessoaFisica("Ellen", new DateTime(1986, 01, 28)));
-
             htPessoaFisica.Add(5, new clsPessoaFisica("Chun Li", new DateTime(2014, 02, 03)));
-
             htPessoaFisica.Add(6, new clsPessoaFisica("Sindel", new DateTime(2014, 04, 07)));
 
-            /* //teste tentando adicionar item ja existente
+
+            /*//teste tentando adicionar item ja existente
             htPessoaFisica.Add(1, new clsPessoaFisica("Fulano", new DateTime(1980, 05, 30)));*/
 
     
@@ -117,7 +124,7 @@ namespace TesteOO
 
 
             htPessoaFisica[5] = new clsPessoaFisica("Ryu", new DateTime(2014, 02, 13)); ;
-            Console.WriteLine("chave key = \"5\", value = {0}.", htPessoaFisica[5]);
+            Console.WriteLine("chave key = \"5\", value = {0}.", ((clsPessoaFisica)htPessoaFisica[5]).Nome);
 
             // If a key does not exist, setting the default Item property
             // for that key adds a new key/value pair.
@@ -128,7 +135,7 @@ namespace TesteOO
             if (!htPessoaFisica.ContainsKey(7))
             {
                 htPessoaFisica.Add(7, new clsPessoaFisica("Professor XY", new DateTime(1988, 09, 15)));
-                Console.WriteLine("Valor adicionado na chave = \"7\": {0}", htPessoaFisica[7]);
+                Console.WriteLine("Valor adicionado na chave = \"7\": {0}", ((clsPessoaFisica)htPessoaFisica[7]).Nome);
             }
 
             //percorrendo hashtable
@@ -137,7 +144,7 @@ namespace TesteOO
                 Console.WriteLine("Chave = {0}, Valor = {1}", de.Key,((clsPessoaFisica) de.Value).Nome);
             }
 
-            // Para obter valores sozinhos
+           // Para obter valores sozinhos
             ICollection htValues = htPessoaFisica.Values;
 
             // Perocorrendo valores sozinhos
@@ -147,7 +154,7 @@ namespace TesteOO
                 Console.WriteLine("Valor = {0}", objPF.Nome);
             }
 
-            // Para obter chaves sozinhas
+             // Para obter chaves sozinhas
             ICollection htKeys = htPessoaFisica.Keys;
 
             // Perocrrendo chaves sozinhas
@@ -197,6 +204,11 @@ namespace TesteOO
             foreach (clsPessoaFisica objPF in alPessoaFisica)
                 Console.Write("   {0}", objPF.Nome);
 
+            Console.WriteLine("Com var...");
+            foreach (var item in alPessoaFisica)
+            {
+                Console.WriteLine(" {0}", ((clsPessoaFisica) item).Nome);
+            }
 
         }
         /// <summary>
@@ -216,6 +228,12 @@ namespace TesteOO
 
             //percorrendo Stack
             foreach (clsPessoaFisica objPF in stackPF)
+            {
+                Console.Write(objPF.Nome + " | ");
+            }
+
+            Console.WriteLine("com o var...");
+            foreach (var objPF in stackPF)
             {
                 Console.Write(objPF.Nome + " | ");
             }
@@ -240,29 +258,29 @@ namespace TesteOO
             SortedList<int, clsPessoaFisica> slPessoaFisica = new SortedList<int, clsPessoaFisica>();
 
             slPessoaFisica.Add(1, new clsPessoaFisica("Fulano", new DateTime(1980, 05, 30)));
-
             slPessoaFisica.Add(2, new clsPessoaFisica("Beltrano", new DateTime(1990, 04, 10)));
-
             slPessoaFisica.Add(3, new clsPessoaFisica("Ciclano", new DateTime(1995, 02, 25)));
-
             slPessoaFisica.Add(4, new clsPessoaFisica("Ellen", new DateTime(1986, 01, 28)));
-
             slPessoaFisica.Add(5, new clsPessoaFisica("Chun Li", new DateTime(2014, 02, 03)));
-
             slPessoaFisica.Add(6, new clsPessoaFisica("Sindel", new DateTime(2014, 04, 07)));
 
             //retornando um item
-
             clsPessoaFisica objPessoaFisica = slPessoaFisica[5];
             Console.WriteLine("A pessoa escolhida é :" + objPessoaFisica.Nome);
 
             //percorrendo a sortedlist
-            foreach (KeyValuePair<int, clsPessoaFisica> k in slPessoaFisica)
+            foreach (KeyValuePair<int, clsPessoaFisica> sl in slPessoaFisica)
             {
-                Console.WriteLine("Key : {0} - Value : {1}", k.Key, k.Value);
+                Console.WriteLine("Key : {0} - Value : {1}", sl.Key, ((clsPessoaFisica)sl.Value).Nome);
             }
 
-           
+            Console.WriteLine("Com o var");
+            foreach (var sl in slPessoaFisica)
+            {
+                Console.WriteLine("Key : {0} - Value : {1}", sl.Key, ((clsPessoaFisica)sl.Value).Nome);
+            }
+
+
         }
         /// <summary>
         /// Exemplo 5 - Teste Queue<T>
@@ -280,7 +298,7 @@ namespace TesteOO
             queuePF.Enqueue(new clsPessoaFisica("Sindel", new DateTime(2014, 04, 07)));
 
             //retornando a queue
-            foreach (clsPessoaFisica objPF in queuePF)
+            foreach (var objPF in queuePF)
             {
                 Console.Write(objPF.Nome + " | ");
             }
@@ -318,11 +336,18 @@ namespace TesteOO
 
              Console.WriteLine("A pessoa escolhida é : " + objPessoaFisica.Nome);
 
-             //para iterar a lista
-             foreach (var objPF in lstPessoaFisica)
+            //para iterar a lista
+            Console.WriteLine("Percorre lista com tipo var");
+            foreach (var objPF in lstPessoaFisica)
              {
                  Console.WriteLine(objPF.Nome);
              }
+
+            Console.WriteLine("Percorre lista com objeto");
+            foreach (clsPessoaFisica objPF in lstPessoaFisica)
+            {
+                Console.WriteLine(objPF.Nome);
+            }
 
 
         }
@@ -387,6 +412,21 @@ namespace TesteOO
             Console.WriteLine(string.Concat(retornoPJ, " e ", retornoPF));
         }
 
+        static void RetornaListaT()
+        {
+            List<int> lstInt = new List<int>();
+            lstInt.Add(1);
+            lstInt.Add(2);
+            lstInt.Add(3);
+
+            lstInt.Remove(1);
+
+            List<clsFelino> gatinhos = new List<clsFelino>();
+
+            List<string> listaNomes = new List<string>();
+
+
+        }
         static void TesteOOFelino()
         {
             clsMamiferos gatinho2 = new clsFelino();
